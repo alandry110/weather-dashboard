@@ -1,6 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
 header {
     background-image: linear-gradient(to right, #4d4dff, #0000b3, #000066);
     color: white;
     font-family: 'Alata', sans-serif;
     text-align: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.header {
+    font-family: 'Alata', sans-serif;
+}
+
+ul {
+    list-style: none;
+    
+}
+
+
+ul li {
+    padding: .5rem;
+    margin: .2rem;
+    background-color: #C8C8C8;
+} 
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    background-color: #245392;
+}
+
+.otherText {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.weather-container {
+    margin: 1rem 2rem 0 1rem;
+}
+
+.search-container {
+    margin-left: 0;
+}
+
+.weeklyForecast {
+    background-color: #245392;
+    margin: .2rem;
+    color: white;
+
 }

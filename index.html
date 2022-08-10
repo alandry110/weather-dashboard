@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
@@ -13,77 +14,81 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
+    
+    <div class="weather-container">
+        <div class="row">
+            <div class="col" class="search-container">
+                <h4 class="header">Search for a City:</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">
+                </div>
+                <button class="btn btn-block text-light otherText" id="search-button">search</button>
+                <hr>
+                <ul class="list-group otherText"></ul>
+            </div>   
 
-    <div class="card w-50">
-        <div class="card-body">
-            <h2 class="card-title">Search for a City:</h2>
-            <div id="search" class="searchBox" ></div>
-            <a href="#" class="btn btn-primary">search</a>
-            <hr> 
-        </div>
+            <div class="col-sm-9">
+                <div class="row border border-dark rounded">
+                    <div class="col mt-2" id="todaysForecast">
+                        <h2 class="cityName header" id="cityWeather"></h2>
+                        <p>Temperature:<span class="today" id="temp"></span></p>
+                        <p>Wind:<span class="today" id="wind"></span></p>
+                        <p>Humidity:<span class="today" id="humidity"></span></p>
+                        <p>UV Index:<span class="today rounded py-2 px-4 text-white" id="uvIndex"></span></p>
+                    </div>
+                </div>
 
-        <div id="searchHistory"></div>
-    </div>
+                <div class="mt-2" id="fiveDayForecast">
+                    <h4 class="header">5-Day Forecast:</h4>
 
-    <div class="card w-50">
-        <div class="card-body">
-            <div id="cityName"><span id="weatherIcon"></span></div>
-            <div id="temp">Temp:</div>
-            <div id="wind">Wind:</div>
-            <div id="Humidity">Humidity:</div>
-            <div id="uvIndex">UV Index:</div> 
-        </div>
+                    <div class="row">
+                        <div class="col pt-2 weeklyForecast">
+                            <p id="day1" class="header"></p>
+                            <p id="icon1"></p>
+                            <p>Temp:<span id="temp1"></span></p>
+                            <p>Wind:<span id="wind1"></span></p>
+                            <p>Humidity:<span id="humidty1"></span></p>
+                        </div>
 
-        <div id="searchHistory"></div>
-    </div>
+                        <div class="col pt-2 weeklyForecast">
+                            <p id="day2" class="header"></p>
+                            <p id="icon2"></p>
+                            <p>Temp:<span id="temp2"></span></p>
+                            <p>Wind:<span id="wind2"></span></p>
+                            <p>Humidity:<span id="humidty2"></span></p>
+                        </div>
 
-    <div class="card w-50 row">
-        <div class="col">
-            <h2>5-Day Forecast:</h2>
-        </div>
+                        <div class="col pt-2 weeklyForecast">
+                            <p id="day3" class="header"></p>
+                            <p id="icon3"></p>
+                            <p>Temp:<span id="temp3"></span></p>
+                            <p>Wind:<span id="wind3"></span></p>
+                            <p>Humidity:<span id="humidty3"></span></p>
+                        </div>
 
-        <div class="card w-50 row">
-            <div class="col">
-                <div id="day1"><span id="weatherIcon1"></span></div>
-                <div id="temp1">Temp:</div>
-                <div id="wind1">Wind:</div>
-                <div id="Humidity1">Humidity:</div>
+                        <div class="col pt-2 weeklyForecast">
+                            <p id="day4" class="header"></p>
+                            <p id="icon4"></p>
+                            <p>Temp:<span id="temp4"></span></p>
+                            <p>Wind:<span id="wind4"></span></p>
+                            <p>Humidity:<span id="humidty4"></span></p>
+                        </div>
+
+                        <div class="col pt-2 weeklyForecast">
+                            <p id="day5" class="header"></p>
+                            <p id="icon5"></p>
+                            <p>Temp:<span id="temp5"></span></p>
+                            <p>Wind:<span id="wind5"></span></p>
+                            <p>Humidity:<span id="humidty5"></span></p>
+                        </div> 
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card w-50 row">
-            <div class="col">
-                <div id="day2"><span id="weatherIcon2"></span></div>
-                <div id="temp2">Temp:</div>
-                <div id="wind2">Wind:</div>
-                <div id="Humidity2">Humidity:</div>
-            </div>
-        </div>
-        <div class="card w-50 row">
-            <div class="col">
-                <div id="day3"><span id="weatherIcon3"></span></div>
-                <div id="temp3">Temp:</div>
-                <div id="wind3">Wind:</div>
-                <div id="Humidity3">Humidity:</div>
-            </div>
-        </div>
-        <div class="card w-50 row">
-            <div class="col">
-                <div id="day4"><span id="weatherIcon4"></span></div>
-                <div id="temp4">Temp:</div>
-                <div id="wind4">Wind:</div>
-                <div id="Humidity4">Humidity:</div>
-            </div>
-        </div>
-        <div class="card w-50 row">
-            <div class="col">
-                <div id="day5"><span id="weatherIcon5"></span></div>
-                <div id="temp5">Temp:</div>
-                <div id="wind5">Wind:</div>
-                <div id="Humidity5">Humidity:</div>
-            </div>
-        </div>
+
     </div>
 <script src="./assets/js/script.js"></script>
-
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
