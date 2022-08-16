@@ -1,6 +1,12 @@
 # Server-Side APIs Challenge: Weather Dashboard
 
 ## Technologies Used
+* CSS
+* Bootstrap
+* JavaScript
+* Google Fonts
+* Font-Awesome 
+* JQuery
 
 ## About the Repository
 The purpose of this repository is to build a weather dashboard that will run in the browser and feature dynamically updated HTMl and CSS.
@@ -23,15 +29,12 @@ For this project, I was given a set of critical requirements. They are as follow
 ![photo of mock-up](./assets/images/06-server-side-apis-homework-demo.png)
 
 
-## Trouble Shooting
-
-## Description and Credits 
-
 ## Final submission links:
 
-* GitHub Repository - 
+* GitHub Repository - https://github.com/alandry110/weather-dashboard
 * GitHub Deployed Page - 
 
-## This is what my final Weather Dashboard looks like:
-![Gif of my Weather Dashboard]
+## This is what my Weather Dashboard looks like so far:
+![Screenshot of Weather Dashboard](./assets/images/Screen%20Shot%202022-08-15%20at%209.43.00%20PM.png)
+
 
