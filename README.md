@@ -32,7 +32,7 @@ For this project, I was given a set of critical requirements. They are as follow
 ## Final submission links:
 
 * GitHub Repository - https://github.com/alandry110/weather-dashboard
-* GitHub Deployed Page - 
+* GitHub Deployed Page - https://alandry110.github.io/weather-dashboard/
 
 ## This is what my Weather Dashboard looks like so far:
 ![Screenshot of Weather Dashboard](./assets/images/Screen%20Shot%202022-08-15%20at%209.43.00%20PM.png)
