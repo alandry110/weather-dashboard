@@ -8,15 +8,26 @@ var currentHumidity = document.querySelector('#current-humidity');
 var currentUVIndex = document.querySelector('#current-uvIndex');
 var weeklyForecast = document.querySelector('#fiveDayForecast');
 
-var apiKey = '&appid=64711a3a34371e60842ce5f4745dc7bf';
-var URLWeather = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + '&units=imperial' + apiKey;
-var URLForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + '&units=imperial' + apiKey;
-var cityName = localStorage.getItem('saveCityName');
+var apiKey = '0327e827733813560b272ec06c5f8ba8';
+
+searchBtn.addEventListener('click', function() {
+    var searchCity = searchInput.value 
+
+    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchCity}&limit=1&appid=${apiKey}`)
+        .then(function (response) {
+            return response.json();
+        }) .then(function (data) {
+            var latKey = data[0].lat;
+            var lonKey = data[0].lon;
+            
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latKey}&lon=${lonKey}&appid=${apiKey}`)
+                .then(function (response) {
+                    return response.json();
+                }) .then(function (weather) {
+                    weather[].
+                })
+        })
+})
 
 
-function saveCityData() {
-    localStorage.setItem('saveCityName', searchInput.value);
-};
 
-searchBtn.addEventListener('click', saveCityData);
-console.log('click');
