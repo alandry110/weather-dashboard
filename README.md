@@ -1,17 +1,21 @@
 # Server-Side APIs Challenge: Weather Dashboard
 
-## Technologies Used
-* CSS
-* Bootstrap
-* JavaScript
-* Google Fonts
-* Font-Awesome 
-* JQuery
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## About the Repository
+## Description
 The purpose of this repository is to build a weather dashboard that will run in the browser and feature dynamically updated HTMl and CSS.
 
 This application also used the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) to retrieve weather data for each city. 
+
+## Table of Contents 
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Technologies Used](#technologies-used)
+- [Final Application](#final-application-walkthrough-video)
+- [Installation](#installation)
+- [Tests](#tests)
+- [Credits](#credits)
+- [License](#license)
 
 ## User Story 
 ```md 
@@ -33,7 +37,7 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
 
-## Additional instruction to complete the final challenge included:
+### Additional instructions:
 * Uses the OpenWeather API to retrieve weather data.
 * Uses localStorage to store persistent data.
 * Application deploys at live URL with no loading errors. 
@@ -43,13 +47,43 @@ THEN I am again presented with current and future conditions for that city
 
 ![photo of mock-up](./assets/images/06-server-side-apis-homework-demo.png)
 
+## Technologies Used
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+* ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+* ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+* Google Fonts
+* Font-Awesome 
 
-## Final submission links:
+## Final Application
+[View Live Link]()
+![gif of weather app]()
 
-* GitHub Repository - https://github.com/alandry110/weather-dashboard
-* GitHub Deployed Page - https://alandry110.github.io/weather-dashboard/
+## Credits
+* [Bootstrap Documentation](!https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
-## This is what my Weather Dashboard looks like so far:
-![Screenshot of Weather Dashboard](./assets/images/Screen%20Shot%202022-08-15%20at%209.43.00%20PM.png)
+## License 
+MIT License
+
+Copyright © 2022, Ashlynn Landry
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 
