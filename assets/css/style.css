@@ -1,53 +1,28 @@
-* {
-    box-sizing: border-box;
-}
-
 header {
     background-image: linear-gradient(to right, #4d4dff, #0000b3, #000066);
-    color: white;
-    font-family: 'Alata', sans-serif;
-    text-align: center;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
 }
 
-.header {
+header, .header {
     font-family: 'Alata', sans-serif;
 }
 
-ul {
-    list-style: none;
-}
-
-ul li {
-    padding: .5rem;
-    margin: .2rem;
-    background-color: #C8C8C8;
-} 
-
-p {
+p, .otherText {
     font-family: 'Montserrat', sans-serif;
 }
 
-button {
-    background-color: #245392;
+button, .weeklyForecast {
+    background-color: #4d4dff;
 }
 
-.otherText {
-    font-family: 'Montserrat', sans-serif;
+.badgeModerate {
+    background-color: yellow;
 }
 
-.weather-container {
-    margin: 1rem 2rem 0 1rem;
+.badgeGood {
+    background-color: greenyellow;
+
 }
 
-.search-container {
-    margin-left: 0;
-}
-
-.weeklyForecast {
-    background-color: #245392;
-    margin: .2rem;
-    color: white;
-
+.badgeDanger {
+    background-color: red;
 }

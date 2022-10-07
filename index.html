@@ -11,84 +11,64 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header>
+    <header class="pt-3 pb-3 text-center text-white">
         <h1>Weather Dashboard</h1>
+        <h4 id="currentDay"></h4>
     </header>
-    
-    <div class="weather-container">
+
+    <div class="container">
         <div class="row">
-            <div class="col" class="search-container">
-                <h4 class="header">Search for a City:</h4>
+            <div class="col-lg-3">
+                <h5 class="mt-4 header">Search for a City:</h5>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">
+                    <input id="search-city" type="text" class="form-control otherText" placeholder="Enter a city" aria-label="City Search">
                 </div>
-                <button class="btn btn-block text-light otherText" id="search-button">search</button>
+                <button class="btn btn-block text-light otherText" id="search-button">Search</button>
                 <hr>
-                <ul class="list-group otherText"></ul>
-            </div>   
+                <form id="search-history" class="otherText"></form>
+                <button class="btn btn-block text-light otherText mt-3" type="button" id="clear-history">Clear History</button>
+            </div>
+            
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-11 card d-none mt-4" id="current-weather">
+                        <div>
+                            <h2 id="city-selected" class="header"></h2>
+                            <img id="weather-icon" alt="">
+                            <p id="current-temp"></p>
+                            <p id="current-wind"></p>
+                            <p id="current-humidity"></p>
+                            <p id="current-uvIndex"></p>
+                        </div>
 
-            <div class="col-sm-9">
-                <div class="row border border-dark rounded">
-                    <div class="col mt-2">
-                        <h2 class="header" id="city-selected"></h2>
-                        <p>Temperature:<span id="current-temp"></span></p>
-                        <p>Wind:<span id="current-wind"></span></p>
-                        <p>Humidity:<span id="current-humidity"></span></p>
-                        <p>UV Index:<span class="rounded py-2 px-4 text-white" id="current-uvIndex"></span></p>
+                        <div class="mb-3">
+                            <div class="card align-items-center" style="border:none">
+                                <div class="row d-none" id="fiveDayForecast">
+                                    <div class="col-12">
+                                        <h4 class="header text-center">5-Day Forecast</h4>
+                                    </div>
+                                </div>
+        
+                                <div class="row text-center">
+                                    <div class="col-md-2 forecast weeklyForecast m-2 text-white rounded"></div>
+                                    <div class="col-md-2 forecast weeklyForecast m-2 text-white rounded"></div>
+                                    <div class="col-md-2 forecast weeklyForecast m-2 text-white rounded"></div>
+                                    <div class="col-md-2 forecast weeklyForecast m-2 text-white rounded"></div>
+                                    <div class="col-md-2 forecast weeklyForecast m-2 text-white rounded"></div>
+                                </div>
+                            </div>          
+                        </div>
                     </div>
                 </div>
 
-                <div class="mt-2" id="fiveDayForecast">
-                    <h4 class="header">5-Day Forecast:</h4>
-
-                    <div class="row">
-                        <div class="col pt-2 weeklyForecast">
-                            <p id="day1" class="header"></p>
-                            <p id="icon1"></p>
-                            <p>Temp:<span id="temp1"></span></p>
-                            <p>Wind:<span id="wind1"></span></p>
-                            <p>Humidity:<span id="humidty1"></span></p>
-                        </div>
-
-                        <div class="col pt-2 weeklyForecast">
-                            <p id="day2" class="header"></p>
-                            <p id="icon2"></p>
-                            <p>Temp:<span id="temp2"></span></p>
-                            <p>Wind:<span id="wind2"></span></p>
-                            <p>Humidity:<span id="humidty2"></span></p>
-                        </div>
-
-                        <div class="col pt-2 weeklyForecast">
-                            <p id="day3" class="header"></p>
-                            <p id="icon3"></p>
-                            <p>Temp:<span id="temp3"></span></p>
-                            <p>Wind:<span id="wind3"></span></p>
-                            <p>Humidity:<span id="humidty3"></span></p>
-                        </div>
-
-                        <div class="col pt-2 weeklyForecast">
-                            <p id="day4" class="header"></p>
-                            <p id="icon4"></p>
-                            <p>Temp:<span id="temp4"></span></p>
-                            <p>Wind:<span id="wind4"></span></p>
-                            <p>Humidity:<span id="humidty4"></span></p>
-                        </div>
-
-                        <div class="col pt-2 weeklyForecast">
-                            <p id="day5" class="header"></p>
-                            <p id="icon5"></p>
-                            <p>Temp:<span id="temp5"></span></p>
-                            <p>Wind:<span id="wind5"></span></p>
-                            <p>Humidity:<span id="humidty5"></span></p>
-                        </div> 
-                    </div>
-                </div>
+                
             </div>
         </div>
-
     </div>
-<script src="./assets/js/script.js"></script>
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
