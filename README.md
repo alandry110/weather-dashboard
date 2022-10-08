@@ -55,8 +55,8 @@ THEN I am again presented with current and future conditions for that city
 * Font-Awesome 
 
 ## Final Application
-[View Live Link](https://ashclandry.github.io/weather-dash/)
-![gif of weather app](./assets/images/Weather%20Dashboard.gif)
+* [View Live Link](https://ashclandry.github.io/weather-dash/)
+* ![gif of weather app](./assets/images/Weather%20Dashboard.gif)
 
 ## Credits
 * [Bootstrap Documentation](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
