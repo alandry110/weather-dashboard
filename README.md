@@ -11,9 +11,7 @@ This application also used the [OpenWeather One Call API](https://openweathermap
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Technologies Used](#technologies-used)
-- [Final Application](#final-application-walkthrough-video)
-- [Installation](#installation)
-- [Tests](#tests)
+- [Final Application](#final-application)
 - [Credits](#credits)
 - [License](#license)
 
