@@ -31,17 +31,28 @@
             
             <div class="col-lg-9">
                 <div class="row">
-                    <div class="col-lg-11 card d-none mt-4" id="current-weather">
+                    <div class="col-lg-11 card d-none mt-4 mb-4 text-center" id="current-weather">
+                        <div class="mt-3 ml-3 mr-3">
+                            <h1 id="city-selected" class="header"></h1>
+                            <p class="m-0" id="weatherDescription"></p>
+
+                            <div class="d-flex align-items-center justify-content-center ml-4"> 
+                                <div>
+                                    <h1 id="current-temp" class="m-0"></h1>
+                                </div>
+                                <div>
+                                    <img id="weather-icon" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div>
-                            <h2 id="city-selected" class="header"></h2>
-                            <img id="weather-icon" alt="">
-                            <p id="current-temp"></p>
                             <p id="current-wind"></p>
                             <p id="current-humidity"></p>
                             <p id="current-uvIndex"></p>
                         </div>
-
-                        <div class="mb-3">
+                        <hr>
+                        <div class="mb-3 ml-3 mr-3">
                             <div class="card align-items-center" style="border:none">
                                 <div class="row d-none" id="fiveDayForecast">
                                     <div class="col-12">

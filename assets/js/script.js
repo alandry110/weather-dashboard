@@ -5,6 +5,7 @@ function initPage() {
     const citySelectedEl = document.getElementById("city-selected");
     const currentDayEl = document.getElementById("currentDay");
     const currentIconEl = document.getElementById("weather-icon");
+    const weatherDescription = document.getElementById("weatherDescription");
     const currentTempEl = document.getElementById("current-temp");
     const currentHumidityEl = document.getElementById("current-humidity");
     const currentWindEl = document.getElementById("current-wind");
@@ -34,9 +35,10 @@ function initPage() {
                 let weatherPic = response.data.weather[0].icon;
                 currentIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
                 currentIconEl.setAttribute("alt", response.data.weather[0].description);
-                currentTempEl.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " &#176F";
+                currentTempEl.innerHTML = k2f(response.data.main.temp) + "&#176";
+                weatherDescription.innerHTML = response.data.weather[0].description;
                 currentHumidityEl.innerHTML = "Humidity: " + response.data.main.humidity + "%";
-                currentWindEl.innerHTML = "Wind Speed: " + response.data.wind.speed + " mph";
+                currentWindEl.innerHTML = "Wind: " + response.data.wind.speed + " mph";
                 
                 // Get UV Index
                 let lat = response.data.coord.lat;
