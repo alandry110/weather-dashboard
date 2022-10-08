@@ -1,4 +1,4 @@
-function initPage() {
+function startSearch() {
     const searchCityEl = document.getElementById("search-city");
     const searchBtnEl = document.getElementById("search-button");
     const clearHistoryEl = document.getElementById("clear-history");
@@ -15,7 +15,7 @@ function initPage() {
     var currentWeatherEl = document.getElementById("current-weather");
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
-    var currentDay = moment();
+    const currentDay = moment();
 
     currentDayEl.innerHTML = currentDay.format("MMMM Do, YYYY");
 
@@ -24,8 +24,8 @@ function initPage() {
 
     function getWeather(cityName) {
         // Execute a current weather get request from open weather api
-        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
-        axios.get(queryURL)
+        let weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
+        axios.get(weatherURL)
             .then(function (response) {
 
                 currentWeatherEl.classList.remove("d-none");
@@ -43,31 +43,31 @@ function initPage() {
                 // Get UV Index
                 let lat = response.data.coord.lat;
                 let lon = response.data.coord.lon;
-                let UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey + "&cnt=1";
-                axios.get(UVQueryURL)
+                let uvURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey + "&cnt=1";
+                axios.get(uvURL)
                     .then(function (response) {
-                        let UVIndex = document.createElement("span");
+                        let uvIndex = document.createElement("span");
                         
                         // When UV Index is good, shows green, when ok shows yellow, when bad shows red
                         if (response.data[0].value < 4 ) {
-                            UVIndex.setAttribute("class", "badge badgeGood");
+                            uvIndex.setAttribute("class", "badge badgeGood");
                         }
                         else if (response.data[0].value < 8) {
-                            UVIndex.setAttribute("class", "badge badgeModerate");
+                            uvIndex.setAttribute("class", "badge badgeModerate");
                         }
                         else {
-                            UVIndex.setAttribute("class", "badge badgeDanger");
+                            uvIndex.setAttribute("class", "badge badgeDanger");
                         }
                         console.log(response.data[0].value)
-                        UVIndex.innerHTML = response.data[0].value;
+                        uvIndex.innerHTML = response.data[0].value;
                         currentIndexEl.innerHTML = "UV Index: ";
-                        currentIndexEl.append(UVIndex);
+                        currentIndexEl.append(uvIndex);
                     });
                 
                 // Get 5 day forecast for this city
                 let cityID = response.data.id;
-                let forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&appid=" + APIKey;
-                axios.get(forecastQueryURL)
+                let forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&appid=" + APIKey;
+                axios.get(forecastURL)
                     .then(function (response) {
                         fiveDayForecastEl.classList.remove("d-none");
                         
@@ -143,6 +143,6 @@ function initPage() {
     
 }
 
-initPage();
+startSearch();
 
 

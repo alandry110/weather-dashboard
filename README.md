@@ -52,16 +52,21 @@ THEN I am again presented with current and future conditions for that city
 * ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 * ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 * ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-* ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+* Moment.js
 * Google Fonts
 * Font-Awesome 
 
 ## Final Application
 [View Live Link](https://ashclandry.github.io/weather-dash/)
-![gif of weather app]()
+![gif of weather app](./assets/images/Weather%20Dashboard.gif)
 
 ## Credits
-* [Bootstrap Documentation](!https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+* [Bootstrap Documentation](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Open Weather API](https://openweathermap.org/forecast5)
+* [API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
+* [Moment.js](https://momentjs.com/docs/)
+* Help from my tutor 
 
 ## License 
 MIT License
